@@ -4,6 +4,10 @@
 
 This program takes a list of tiles and turns it into a black and white image, with white pixels where there were tiles in the list. This image can then be used with other image processing software to visualize the tile list.
 
+## Requirements
+
+This program requires python image library (`sudo apt-get install python3-pil` on Debian-derived systems).
+
 ## Usage
 
 ```
@@ -43,3 +47,6 @@ cat tiles-2019-08-11.txt | cut -f1 -d' ' | grep '^12' | ./tiles2image.py 12 z12.
 
 diff <(cat tiles-2019-08-11.txt | cut -f1 -d' ' | grep '^12' | sort) <(./image2tiles.py 12 z12.png | sort)
 ```
+
+## License
+This program is licensed under the Apache License 2.0.
